@@ -2,10 +2,9 @@
 import './Admin.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React,{useEffect,useState} from 'react';
-import { Card,Button,AppBar,Toolbar,TextField,Text } from '@material-ui/core';
+import { Paper,Table,Button,TableContainer,TableHead,TableRow,TableCell,TableBody,Toolbar,TextField,Text } from '@material-ui/core';
 import axios from 'axios';
 import {Modal,ModalFooter,ModalHeader,ModalBody} from 'reactstrap';
-
 const Admin = ()=> {
     const[data,setData] =useState([]);
     const[modalInsertar,setModalInsertar]=useState(false);
@@ -90,36 +89,37 @@ const Admin = ()=> {
     
     <Button color="primary" variant="contained" onClick={()=>abrirCerrarModalInsertar()}>Insertar turno</Button>
 
+    <TableContainer component={Paper}>
+      <Table className="Admin" aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Id</TableCell>
+            <TableCell align="right">Fecha</TableCell>
+            <TableCell align="right">Hora</TableCell>
+            <TableCell align="right">Cliente</TableCell>
+            <TableCell align="right">Acciones</TableCell>
 
-  <table className='table table-bordered'>
-    <thead>
-  <tr>
-  <th>Fecha</th>
-  <th>Hora</th>
-  <th>Cliente</th>
-  <th>Acciones</th>
-  
-  
-  </tr>
-  </thead>
-    <tbody>
-      {data.map(turno=>(
-        <tr>
-          <td>{turno.fecha}</td>
-          <td>{turno.hora}</td>
-          <td>{turno.cliente}</td>
-          <td>
-            <Button color="primary" variant="contained" onClick={()=>seleccionarTurno(turno,"Editar")}>Editar</Button>
-            <button className="btn btn-danger">Eliminar</button>
-  
-  
-          </td>
-  
-  
-        </tr>
-      ))}
-    </tbody>
-  </table>
+
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {data.map((turno) => (
+            <TableRow key={turno.id}>
+              <TableCell component="th" scope="row">
+                {turno.id}
+              </TableCell>
+              <TableCell align="right">{turno.fecha}</TableCell>
+              <TableCell align="right">{turno.hora}</TableCell>
+              <TableCell align="right">{turno.cliente}</TableCell>
+              <TableCell><Button color="primary" variant="contained" onClick={()=>seleccionarTurno(turno,"Editar")}>Editar</Button>
+            <button className="btn btn-danger">Eliminar</button></TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+
+
 
   
 <Modal isOpen={modalInsertar}>
