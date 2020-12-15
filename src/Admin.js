@@ -128,10 +128,14 @@ const Admin = ()=> {
   <ModalBody>
     <div className="form-group">
         <br></br>
-      <TextField id="fecha" name="fecha" label="fecha" type="date" onChange={handleChange} />
+        <label>Fecha:</label>
+      <br></br>
+      <TextField id="fecha" name="fecha" type="date" onChange={handleChange} />
+      <br></br>
+      <label>Hora:</label>
       <br></br>
 
-      <TextField id="hora" name="hora" label="hora" type="time" onChange={handleChange}  />
+      <TextField id="hora" name="hora" type="time" onChange={handleChange}  />
       <br></br>
 
       <label>Cliente : </label>
