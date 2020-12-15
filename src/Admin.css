@@ -1,0 +1,52 @@
+.Admin {
+    text-align: center;
+  }
+  
+  .container {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .Admin-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .Admin-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .Admin-header {
+    background-color: #be4083;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #fb61bb;
+  }
+  
+  body{
+    width:100%;
+    align-content:center;
+    float:center;
+    position : absolute;
+    left : 0%;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
