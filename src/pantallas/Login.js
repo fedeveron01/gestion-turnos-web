@@ -1,5 +1,4 @@
 
-import logo from './logo.svg';
 import './Admin.css';
 
 import Moment from 'moment';
@@ -23,7 +22,7 @@ const Login = ()=> {
     
     const iniciarSesion=()=>{
             (usuarioSeleccionado.usuario==="admin" && usuarioSeleccionado.contraseña==="admin")?
-            window.location.href="./yy4jFpDix8xO6CPwhxDEOyz$hIii7HwpmDfp69Iz8sdzQO4CyD02yAAOVjaoeG29ycv8wcOAfJl8lbtNJvVhYgo9wu" : window.alert("Usuario y/o contraseña incorrectas");
+            window.location.href="/calendario" : window.alert("Usuario y/o contraseña incorrectas");
     }
     return(
         <div align="center" className="admin">

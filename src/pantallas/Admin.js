@@ -25,6 +25,9 @@ const Admin = ()=> {
   
     }
   
+    const abrirCalendario =()=>{
+      window.location.href="./calendario"
+    }
     const abrirCerrarModalInsertar=()=>{
       setModalInsertar(!modalInsertar);
     }
@@ -105,6 +108,8 @@ const Admin = ()=> {
     <br></br>
 
     <Button color="primary" variant="contained" onClick={()=>abrirCerrarModalInsertar()}>Insertar turno</Button>
+    <br></br>
+    <Button color="secondary" variant="contained" onClick={()=>abrirCalendario()}>Abrir calendario</Button>
 
     <TableContainer component={Paper}>
       <Table className="Admin" aria-label="simple table">

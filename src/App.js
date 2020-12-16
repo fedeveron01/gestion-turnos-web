@@ -2,9 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 import './carousel.css';
 import './carousel.min.css';
-import Admin from './Admin.js';
+import Admin from './pantallas/Admin.js';
 import Principal from './Principal';
-import Login from './Login'
+import Login from './pantallas/Login'
+import Calendario from './pantallas/Calendario';
+
 import { AppBar,Toolbar,Button} from '@material-ui/core';
 import React from 'react';
 
@@ -30,10 +32,17 @@ function App() {
             <Admin />
           </Route>
   
-          <Route path="/admin/">
+          <Route path="/admin">
   
            <Login />
-</Route>
+        </Route>
+
+  
+      <Route path="/calendario">
+  
+       <Calendario />
+      </Route>
+
 
           <Route path="/">
           <Principal />
