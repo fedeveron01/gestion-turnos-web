@@ -90,10 +90,7 @@ const Principal = ()=> {
   return (
 
         <div className="App">
-    <AppBar position="static" color="secondary"><Toolbar position="static" color="red"> 
-
-    <Button color="inherit">Inicio</Button>
-  </Toolbar></AppBar>
+ 
             <Carousel showArrows={true}>
                 <div align="center">
                     <img src="https://scontent.fcor2-2.fna.fbcdn.net/v/t1.0-9/105585728_2673988666166255_734868968822591959_n.png?_nc_cat=105&ccb=2&_nc_sid=174925&_nc_ohc=LwPRJEXSLrcAX8KtVT3&_nc_oc=AQk24WVpL4u2EWo6q75N_XmodOYvSDsrnTLgx-lz3narcDEgBLyYbwU2-gbg4vT5wXM&_nc_ht=scontent.fcor2-2.fna&oh=81af6bee2fa46235ebade62b265bcfc7&oe=5FFDAD83" />
@@ -122,7 +119,7 @@ const Principal = ()=> {
             <TextField id="fechaHasta" name="fechaHasta" type="date" defaultValue="2021-12-12" onChange={handleChange} />
 
             {()=>ordenarData()}
-            {data.map(turno=> ( Moment(turno.fecha) >= Moment(intervaloSeleccionado.fechaDesde))&& (Moment(turno.fecha) <= Moment(intervaloSeleccionado.fechaHasta))  && (turno.cliente!=null) ? (
+            {data.map(turno=> ( Moment(turno.fecha) >= Moment(intervaloSeleccionado.fechaDesde))&& (Moment(turno.fecha) <= Moment(intervaloSeleccionado.fechaHasta))  && (turno.cliente==null || turno.cliente=="" ) ? (
               <Card variant="outlined">
                 <CardContent>
                   <h1>{Moment(turno.fecha).format('DD/MM/YYYY')}</h1>

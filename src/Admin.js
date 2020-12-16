@@ -86,7 +86,10 @@ const Admin = ()=> {
   return (
 
  <div className="Admin">
-    
+    <br></br>
+    <br></br>
+    <br></br>
+
     <Button color="primary" variant="contained" onClick={()=>abrirCerrarModalInsertar()}>Insertar turno</Button>
 
     <TableContainer component={Paper}>
@@ -123,7 +126,9 @@ const Admin = ()=> {
 
   
 <Modal isOpen={modalInsertar}>
-    
+    <br></br>
+    <br></br>
+    <br></br>
   <ModalHeader>Insertar turno</ModalHeader>
   <ModalBody>
     <div className="form-group">
@@ -152,6 +157,7 @@ const Admin = ()=> {
 
 
 <Modal isOpen={modalEditar} >
+<br></br><br></br><br></br>
   <ModalHeader>Modificar producto</ModalHeader>
   <ModalBody>
     <div className="form-group">
@@ -176,6 +182,8 @@ const Admin = ()=> {
 
   </ModalFooter>
 </Modal>
+
+
 
 
       </div>

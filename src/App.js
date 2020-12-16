@@ -4,7 +4,7 @@ import './carousel.css';
 import './carousel.min.css';
 import Admin from './Admin.js';
 import Principal from './Principal';
-
+import { AppBar,Toolbar,Button} from '@material-ui/core';
 import React from 'react';
 
 import {BrowserRouter as Router, Route,Switch,Link} from 'react-router-dom';
@@ -14,7 +14,13 @@ function App() {
   return (
 
     <div>
-    <Router>
+          <Router>
+
+        <AppBar color="secondary"><Toolbar position="static" color="red"> 
+    <Button color="inherit" to="/" component={Link} > Inicio
+</Button>
+      </Toolbar></AppBar>
+
 
  
       <Route> <Switch>
