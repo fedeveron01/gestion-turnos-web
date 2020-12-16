@@ -42,14 +42,28 @@ const Admin = ()=> {
           abrirCerrarModalInsertar();
         }).catch(error=>{
           console.log(error);
+          window.location.reload();
+
           abrirCerrarModalInsertar();
 
         })
       }
+
+      const peticionesDelete= async ()=>{
+    
+        await axios.delete(url+"/"+turnoSeleccionado.id)
+        .then(response=>{
+          setData(data.filter(turno=>turno.id!==response.data));
+        }).catch(error=>{
+          console.log(error);
+
+        })
+      }
+    
     
       const seleccionarTurno=(turno,caso)=>{
         setTurnoSeleccionado(turno);
-        (caso==="Editar")&&abrirCerrarModalEditar()
+        (caso==="Editar")?abrirCerrarModalEditar():peticionesDelete()
       }
       const peticionesPut= async ()=>{
   
@@ -115,7 +129,7 @@ const Admin = ()=> {
               <TableCell align="right">{turno.hora}</TableCell>
               <TableCell align="right">{turno.cliente}</TableCell>
               <TableCell><Button color="primary" variant="contained" onClick={()=>seleccionarTurno(turno,"Editar")}>Editar</Button>
-            <button className="btn btn-danger">Eliminar</button></TableCell>
+            <button className="btn btn-danger" onClick={()=>seleccionarTurno(turno,"Eliminar")}>Eliminar</button></TableCell>
             </TableRow>
           ))}
         </TableBody>

@@ -4,6 +4,7 @@ import './carousel.css';
 import './carousel.min.css';
 import Admin from './Admin.js';
 import Principal from './Principal';
+import Login from './Login'
 import { AppBar,Toolbar,Button} from '@material-ui/core';
 import React from 'react';
 
@@ -24,11 +25,16 @@ function App() {
 
  
       <Route> <Switch>
-          <Route path="/admin">
+          <Route path="/admin/yy4jFpDix8xO6CPwhxDEOyz$hIii7HwpmDfp69Iz8sdzQO4CyD02yAAOVjaoeG29ycv8wcOAfJl8lbtNJvVhYgo9wu">
   
             <Admin />
           </Route>
   
+          <Route path="/admin/">
+  
+           <Login />
+</Route>
+
           <Route path="/">
           <Principal />
 
