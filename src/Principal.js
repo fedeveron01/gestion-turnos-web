@@ -17,7 +17,7 @@ const Principal = ()=> {
 
     const[intervaloSeleccionado,setIntervaloSeleccionado] = useState({
         fechaDesde : Moment(Date.now()).format("YYYY-MM-DD"),
-        fechaHasta:"2021-12-12"
+        fechaHasta: Moment(Date.now()).add(60,'days').format('YYYY-MM-DD')
     }
     );
   
@@ -114,9 +114,9 @@ const Principal = ()=> {
             <h1>Turnos disponibles:</h1>
             <br></br>
             <h3>Filtros </h3>
-            <TextField id="fechaDesde" name="fechaDesde" type="date" defaultValue={Moment(Date.now()).format('YYYY-MM-DD')} onChange={handleChange} />
+            <TextField id="fechaDesde" name="fechaDesde" type="date" defaultValue={intervaloSeleccionado.fechaDesde} onChange={handleChange} />
             -
-            <TextField id="fechaHasta" name="fechaHasta" type="date" defaultValue="2021-12-12" onChange={handleChange} />
+            <TextField id="fechaHasta" name="fechaHasta" type="date" defaultValue={intervaloSeleccionado.fechaHasta} onChange={handleChange} />
 
             {()=>ordenarData()}
             {data.map(turno=> ( Moment(turno.fecha) >= Moment(intervaloSeleccionado.fechaDesde))&& (Moment(turno.fecha) <= Moment(intervaloSeleccionado.fechaHasta))  && (turno.cliente==null || turno.cliente=="" ) ? (
