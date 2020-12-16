@@ -26,7 +26,7 @@ const Admin = ()=> {
     }
   
     const abrirCalendario =()=>{
-      window.location.href="./calendario"
+      window.location.href="/calendario"
     }
     const abrirCerrarModalInsertar=()=>{
       setModalInsertar(!modalInsertar);
