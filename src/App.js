@@ -21,7 +21,7 @@ function App() {
   var c = 0;
   const abrirAdmin =()=>{
     c+=1;
-    (c)===10?window.location.href="./admin/":console.log()
+    (c)===5?window.location.href="./admin/":console.log()
   }
   const useStyles = makeStyles({
     root: {
