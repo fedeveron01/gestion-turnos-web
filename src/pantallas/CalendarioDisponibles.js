@@ -82,10 +82,7 @@ const CalendarioDisponibles = ()=> {
     return(
 
         <div>
-<br></br>
-<br></br>
-<br></br>
-     
+
 
         <Calendar
       onClick={(value) => abrir(value)}

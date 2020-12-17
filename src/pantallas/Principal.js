@@ -42,30 +42,9 @@ const Principal = ()=> {
     window.location.href=url;
   }
 
-  
-  
-  const ordenarData=()=>{
-    const nuevoData = data.sort((a,b) => Moment(a.fecha) - Moment(b.fecha));
-    setData(nuevoData);
-
-  }
 
 
 
- 
-
-  const peticionesGet= async ()=>{
-    await axios.get(url)
-    .then(response=>{
-      setData(response.data);
-   
-
-    }).catch(error=>{
-      console.log(error);
-    })
-  }
-  useEffect(()=>
-  peticionesGet(),[])
   
     Moment.locale("en");
   return (
@@ -97,6 +76,8 @@ const Principal = ()=> {
 
             <CalendarioDisponibles/>
           
+            <br></br>
+            <br></br>
 
             <Card>
 
