@@ -118,14 +118,14 @@ const CalendarioDisponibles = ()=> {
           
           
            </div>
-          ): (<div><label>No existe ningun evento en la fecha seleccionada</label></div>)
+          ): (<div><label>No hay ningun turno cargado en la fecha seleccionada</label></div>)
           }
 
           </DialogContentText>
         </DialogContent>
         <DialogActions>
          
-          <Button onClick={handleClose} color="primary" autoFocus>
+          <Button onClick={handleClose} color="secondary" autoFocus>
             Aceptar
           </Button>
         </DialogActions>

@@ -5,6 +5,7 @@ import Principal from './pantallas/Principal';
 import Login from './pantallas/Login';
 import Facebook from './pantallas/Facebook';
 import Ayuda from './pantallas/Ayuda';
+import Galeria from './pantallas/Galeria';
 
 
 import Calendario from './pantallas/Calendario';
@@ -21,7 +22,7 @@ function App() {
   var c = 0;
   const abrirAdmin =()=>{
     c+=1;
-    (c)===5?window.location.href="./admin/":console.log()
+    (c)===4?window.location.href="./admin/":console.log()
   }
   const useStyles = makeStyles({
     root: {
@@ -58,7 +59,7 @@ function App() {
   className={classes.root}
 >
 <BottomNavigationAction color="red" to="/" component={Link} icon={<img width="40" src="https://i.pinimg.com/originals/88/48/d5/8848d51a04d7f272187ec179f7def64a.png"/>}  />
-  <BottomNavigationAction  color="red" to="/calendario" component={Link} icon={<img width="40" src="https://image.flaticon.com/icons/png/128/42/42446.png"/>}/>
+  <BottomNavigationAction  color="red" to="/galeria" component={Link} icon={<img width="40" src="https://cdn4.iconfinder.com/data/icons/erp-software-icon-set-1/512/new_order_confirmation_green-512.png"/>}/>
   <BottomNavigationAction  to="/facebook" component={Link} icon={<img width="40" src="https://cdn.iconscout.com/icon/free/png-256/facebook-social-media-fb-logo-square-44659.png"/>}/>
   <BottomNavigationAction  onClick={()=>abrirAdmin()} to="/ayuda" component={Link} icon={<img width="35" src="https://image.flaticon.com/icons/png/128/61/61040.png?ga=GA1.2.816560065.1596499200"/>}/>
 
@@ -91,6 +92,13 @@ function App() {
   
        <Calendario />
       </Route>
+
+
+      <Route path="/galeria">
+  
+       <Galeria />
+      </Route>
+
 
 
           <Route path="/">

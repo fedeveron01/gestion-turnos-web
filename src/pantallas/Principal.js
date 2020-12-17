@@ -8,7 +8,7 @@ import React,{useEffect,useState} from 'react';
 import {Carousel} from 'react-responsive-carousel';
 import { TextField,Card,CardContent,CardActions,Button,AppBar,Toolbar,ButtonGroup,Text } from '@material-ui/core';
 import axios from 'axios';
-import CalendarioDisponibles from './CalendarioDisponibles'
+import CalendarioDisponibles from './CalendarioDisponibles';
 
 const Principal = ()=> {
     const [fecha,setFecha] = useState(Date);
@@ -54,20 +54,16 @@ const Principal = ()=> {
             <Carousel showArrows={true}>
                 <div align="center">
                     <img src="https://scontent.fcor2-2.fna.fbcdn.net/v/t1.0-9/105585728_2673988666166255_734868968822591959_n.png?_nc_cat=105&ccb=2&_nc_sid=174925&_nc_ohc=LwPRJEXSLrcAX8KtVT3&_nc_oc=AQk24WVpL4u2EWo6q75N_XmodOYvSDsrnTLgx-lz3narcDEgBLyYbwU2-gbg4vT5wXM&_nc_ht=scontent.fcor2-2.fna&oh=81af6bee2fa46235ebade62b265bcfc7&oe=5FFDAD83" />
-                    <p className="legend">Esencia Beauty</p>
                 </div>
                 <div>
                     <img src="https://scontent.fcor2-2.fna.fbcdn.net/v/t1.0-9/121787035_2774142272817560_6780994435773400335_o.jpg?_nc_cat=110&ccb=2&_nc_sid=e3f864&_nc_ohc=gaxTWLDjnyIAX8ZtJqS&_nc_ht=scontent.fcor2-2.fna&oh=078202b49fa1fbce501c04b965b4a1f1&oe=5FFFE083"/>
-                    <p className="legend">servicio uñas esculpidas</p>
                 </div>
                 <div>
                     <img src="https://scontent.fcor2-1.fna.fbcdn.net/v/t1.0-9/118762620_2733046280260493_2570999635225391527_o.jpg?_nc_cat=108&ccb=2&_nc_sid=e3f864&_nc_ohc=R4F3ApZoWtQAX-VkcUg&_nc_ht=scontent.fcor2-1.fna&oh=895a811695f3a5f917b012ab67757993&oe=5FFF899D" />
-                    <p className="legend">servicio uñas esculpidas</p>
                 </div>
       
                 <div>
                     <img src="https://scontent.fcor2-2.fna.fbcdn.net/v/t1.0-9/109570109_2691619324403189_3760877659480707837_o.jpg?_nc_cat=110&ccb=2&_nc_sid=a26aad&_nc_ohc=V4kHyT2ScuIAX8ybxfa&_nc_oc=AQnICBRIPZDgY8G0tiIEl1AZ_z1nvSaylHC7PkgqUCbYh5lXDDwjLE7WL090x1mCJhI&_nc_ht=scontent.fcor2-2.fna&oh=2601a57cc23bc52dc77c98057c658f30&oe=5FFE7D7C" />
-                    <p className="legend">servicio uñas esculpidas</p>
                 </div>
             </Carousel>
             
@@ -75,7 +71,7 @@ const Principal = ()=> {
             <br></br>
 
             <CalendarioDisponibles/>
-          
+            <p style={{color:'#FF0000'}}> **Para solicitar un turno presionar en una fecha con turnos cargados</p>
             <br></br>
             <br></br>
 
