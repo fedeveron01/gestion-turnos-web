@@ -1,6 +1,6 @@
 
-import logo from './logo.svg';
-import './App.css';
+
+import './Admin.css';
 import './carousel.css';
 import './carousel.min.css';
 import Moment from 'moment';
@@ -8,29 +8,20 @@ import React,{useEffect,useState} from 'react';
 import {Carousel} from 'react-responsive-carousel';
 import { TextField,Card,CardContent,CardActions,Button,AppBar,Toolbar,ButtonGroup,Text } from '@material-ui/core';
 import axios from 'axios';
-
+import CalendarioDisponibles from './CalendarioDisponibles'
 
 const Principal = ()=> {
     const [fecha,setFecha] = useState(Date);
     const [data,setData] = useState([]);
     const [sortedData,setSortedData] = useState([]);
 
-    const[intervaloSeleccionado,setIntervaloSeleccionado] = useState({
-        fechaDesde : Moment(Date.now()).format("YYYY-MM-DD"),
-        fechaHasta: Moment(Date.now()).add(60,'days').format('YYYY-MM-DD')
-    }
-    );
-  
+ 
+    
   
     const url = "https://sysgestion.somee.com/api/turnos";
 
 
-    const consultarTurnos=(turno)=>{
-  
-    const urlWsp = `https://api.whatsapp.com/send?phone=543517894048&text=¿El turno del ${convertirFecha(turno.fecha)} a las ${turno.hora} hs sigue disponible?`;
-    window.location.href=urlWsp;
-  }
-
+   
   const consultarInstagram=()=>{
   
     const url = "https://www.instagram.com/esencia.cba/?hl=es-la"
@@ -52,12 +43,6 @@ const Principal = ()=> {
   }
 
   
-  const handleChange=e=>{
-    const{name,value}=e.target;
-    setIntervaloSeleccionado({...intervaloSeleccionado,[name]:value})
-    console.log(intervaloSeleccionado)
-
-  }
   
   const ordenarData=()=>{
     const nuevoData = data.sort((a,b) => Moment(a.fecha) - Moment(b.fecha));
@@ -66,11 +51,7 @@ const Principal = ()=> {
   }
 
 
-  const convertirFecha=(fechaTurno)=>{
-  
-    return Moment(fechaTurno).format('DD/MM/YYYY');
-  
-  }
+
  
 
   const peticionesGet= async ()=>{
@@ -113,26 +94,9 @@ const Principal = ()=> {
             
             <h1>Turnos disponibles:</h1>
             <br></br>
-            <h3>Filtros </h3>
-            <TextField id="fechaDesde" name="fechaDesde" type="date" defaultValue={intervaloSeleccionado.fechaDesde} onChange={handleChange} />
-            -
-            <TextField id="fechaHasta" name="fechaHasta" type="date" defaultValue={intervaloSeleccionado.fechaHasta} onChange={handleChange} />
 
-            {()=>ordenarData()}
-            {data.map(turno=> ( Moment(turno.fecha) >= Moment(intervaloSeleccionado.fechaDesde))&& (Moment(turno.fecha) <= Moment(intervaloSeleccionado.fechaHasta))  && (turno.cliente==null || turno.cliente=="" ) ? (
-              <Card variant="outlined">
-                <CardContent>
-                  <h1>{Moment(turno.fecha).format('DD/MM/YYYY')}</h1>
-                  <h1>{turno.hora}</h1>
-                  <Button startIcon={<img src="https://cdn.icon-icons.com/icons2/729/PNG/128/whatsapp_icon-icons.com_62756.png" width="40"/>} onClick={()=>consultarTurnos(turno)} variant="contained" color="secondary">Solicitar</Button>
-                  </CardContent>
-
-                  </Card>
-
-            ):null
-            )
+            <CalendarioDisponibles/>
           
-          }
 
             <Card>
 

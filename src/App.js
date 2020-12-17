@@ -1,15 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import './carousel.css';
-import './carousel.min.css';
+
 import Admin from './pantallas/Admin.js';
-import Principal from './Principal';
+import Principal from './pantallas/Principal';
 import Login from './pantallas/Login';
 import Facebook from './pantallas/Facebook';
 import Instagram from './pantallas/Instagram';
 
 
 import Calendario from './pantallas/Calendario';
+
 
 
 import { BottomNavigation,BottomNavigationAction,AppBar,Toolbar,makeStyles} from '@material-ui/core';
