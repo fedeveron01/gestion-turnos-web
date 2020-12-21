@@ -13,7 +13,7 @@ import {Carousel} from 'react-responsive-carousel';
 const Galeria = () =>{
 
     return(
-        <div>
+        <div className="App">
             <br></br>
             <br></br>
             <br></br>
