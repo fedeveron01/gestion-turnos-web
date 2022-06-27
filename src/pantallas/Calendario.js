@@ -18,7 +18,7 @@ const Calendario = ()=> {
 
     ]);
 
-    const url = "https://sysgestion.somee.com/api/turnos";
+    const url = "https://esencia.somee.com/api/turnos";
 
     const peticionesGet= async ()=>{
         await axios.get(url)

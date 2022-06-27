@@ -20,7 +20,7 @@ const CalendarioDisponibles = ()=> {
 
     const consultarTurnos=(turno)=>{
   
-      const urlWsp = `https://api.whatsapp.com/send?phone=543517894048&text=¿El turno del ${convertirFecha(turno.fecha)} a las ${turno.hora} hs sigue disponible?`;
+      const urlWsp = `https://api.whatsapp.com/send?phone=5493512802515&text=¿El turno del ${convertirFecha(turno.fecha)} a las ${turno.hora} hs sigue disponible?`;
       window.location.href=urlWsp;
     }
     const convertirFecha=(fechaTurno)=>{
@@ -36,7 +36,7 @@ const CalendarioDisponibles = ()=> {
   );
 
 
-    const url = "https://sysgestion.somee.com/api/turnos";
+    const url = "https://esencia.somee.com/api/turnos";
 
     const peticionesGet= async ()=>{
         await axios.get(url)

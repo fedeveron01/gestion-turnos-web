@@ -9,7 +9,7 @@ const Admin = ()=> {
     const[data,setData] =useState([]);
     const[modalInsertar,setModalInsertar]=useState(false);
     const[modalEditar,setModalEditar]=useState(false);
-    const url = "https://sysgestion.somee.com/api/turnos";
+    const url = "https://esencia.somee.com/api/turnos";
 
     const[turnoSeleccionado,setTurnoSeleccionado]=useState({
       id:'',

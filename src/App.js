@@ -68,7 +68,7 @@ function App() {
         <Tab to="/" component={Link} icon={<img width="40" src="https://i.pinimg.com/originals/88/48/d5/8848d51a04d7f272187ec179f7def64a.png"/>}>   </Tab>
           <Tab icon={<img width="40" src="https://cdn4.iconfinder.com/data/icons/erp-software-icon-set-1/512/new_order_confirmation_green-512.png"/>} />
          <Tab icon={<img width="40" src="https://cdn.iconscout.com/icon/free/png-256/facebook-social-media-fb-logo-square-44659.png"/>} />
-         <Tab onClick={()=>abrirAdmin()} icon={<img width="35" src="https://image.flaticon.com/icons/png/128/61/61040.png?ga=GA1.2.816560065.1596499200"/>} />
+         <Tab onClick={()=>abrirAdmin()} icon={<img width="40" src="https://cdn.iconscout.com/icon/free/png-256/help-problem-quetion-query-30511.png"/>} />
 
         </Tabs>
      
